@@ -6,8 +6,8 @@ addons:
     organization: "chriszielinski-github"
 
 script:
-    - carthage update --platform macOS
-    - xcodebuild test -project Thesi.xcodeproj -scheme Thesi -destination 'platform=macOS' -configuration Travis | xcpretty
+    - make carthage
+    - make test
     - swiftlint
     - sonar-scanner
 after_success:

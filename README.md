@@ -2,21 +2,22 @@ Thesi
 =====
  
 <p align="center">
-	<a href="https://travis-ci.org/chriszielinski/Thesi">
+	<a href="https://travis-ci.org/chriszielinski/Thesi" style="text-decoration:none" target="_blank">
 		<img src="https://travis-ci.org/chriszielinski/Thesi.svg?branch=master">
 	</a>
-	<a href="https://sonarcloud.io/dashboard?id=chriszielinski_Thesi">
+	<a href="https://sonarcloud.io/dashboard?id=chriszielinski_Thesi" style="text-decoration:none" target="_blank">
 		<img src="https://sonarcloud.io/api/project_badges/measure?project=chriszielinski_Thesi&metric=alert_status">
 	</a>
-	<a href="https://codebeat.co/projects/github-com-chriszielinski-thesi-master">
-		<img alt="codebeat badge" src="https://codebeat.co/badges/ee3d7da6-4a4d-4ebe-8750-442a8a69ed0f" />	</a>
-	<a href="https://codecov.io/gh/chriszielinski/Thesi">
-	  <img src="https://codecov.io/gh/chriszielinski/Thesi/branch/master/graph/badge.svg" />
+	<a href="https://codebeat.co/projects/github-com-chriszielinski-thesi-master" style="text-decoration:none" target="_blank">
+		<img alt="codebeat badge" src="https://codebeat.co/badges/ee3d7da6-4a4d-4ebe-8750-442a8a69ed0f">
 	</a>
-	<a href="https://developer.apple.com/swift" style="text-decoration:none">
+	<a href="https://codecov.io/gh/chriszielinski/Thesi" style="text-decoration:none" target="_blank">
+	  <img src="https://codecov.io/gh/chriszielinski/Thesi/branch/master/graph/badge.svg">
+	</a>
+	<a href="https://developer.apple.com/swift" style="text-decoration:none" target="_blank">
 		<img alt="Swift Version" src ="https://img.shields.io/badge/language-swift%204.2-brightgreen.svg"/>
 	</a>
-	<a href="https://github.com/chriszielinski/Enlighten/blob/master/LICENSE" style="text-decoration:none">
+	<a href="https://github.com/chriszielinski/Enlighten/blob/master/LICENSE" style="text-decoration:none" target="_blank">
 		<img alt="GitHub license" src ="https://img.shields.io/badge/license-MIT-blue.svg"/>
 	</a>
 	<br>
@@ -43,6 +44,15 @@ Features
 * Easily specify dimensions and center alignment of images.
 * Supports MacDown undo/redo.
 * GitHub-Flavored Markdown friendly.
+
+
+Installation
+============
+
+There are a few ways to install the plug-in:
+
+* `cd` into the directory and run `make install`.
+* Build the 'Thesi' scheme in Xcode.
 
 
 Callouts

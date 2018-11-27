@@ -5,6 +5,9 @@ Thesi
 	<a href="https://travis-ci.org/chriszielinski/Thesi">
 		<img src="https://travis-ci.org/chriszielinski/Thesi.svg?branch=master">
 	</a>
+	<a href="https://sonarcloud.io/dashboard?id=chriszielinski_Thesi">
+		<img src="https://sonarcloud.io/api/project_badges/measure?project=chriszielinski_Thesi&metric=alert_status">
+	</a>
 	<a href="https://codecov.io/gh/chriszielinski/Thesi">
 	  <img src="https://codecov.io/gh/chriszielinski/Thesi/branch/master/graph/badge.svg" />
 	</a>

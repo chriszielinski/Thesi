@@ -10,7 +10,7 @@
             ActionType = "Xcode.IDEStandardExecutionActionsCore.ExecutionActionType.ShellScriptAction">
             <ActionContent
                title = "Run Script"
-               scriptText = "cp -rf &quot;$BUILT_PRODUCTS_DIR/$FULL_PRODUCT_NAME&quot; &quot;$USER_LIBRARY_DIR/Application Support/MacDown/PlugIns/&quot;&#10;">
+               scriptText = "INSTALL_DIR=~/Library/Application\ Support/MacDown/PlugIns&#10;&#10;mkdir -p &quot;$INSTALL_DIR&quot;&#10;cp -rf &quot;$BUILT_PRODUCTS_DIR/$FULL_PRODUCT_NAME&quot; &quot;$INSTALL_DIR&quot;&#10;">
                <EnvironmentBuildable>
                   <BuildableReference
                      BuildableIdentifier = "primary"

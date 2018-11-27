@@ -4,12 +4,12 @@ addons:
   sonarcloud:
     organization: chriszielinski-github
 script:
-- make carthage
-- make test
-- swiftlint
-- sonar-scanner
+  - make
+  - make test
+  - swiftlint
+  - sonar-scanner
 after_success:
-- bash <(curl -s https://codecov.io/bash)
+  - bash <(curl -s https://codecov.io/bash)
 deploy:
   provider: releases
   api_key:

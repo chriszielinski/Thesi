@@ -1,21 +1,19 @@
 XCODEFLAGS=-project Thesi.xcodeproj \
 	-scheme Thesi \
-	-destination 'platform=macOS' \
-	DSTROOT=.
+	-destination 'platform=macOS'
 FULL_PRODUCT_NAME=Thesi.plugin
-BUILT_PRODUCT_DIR=./build/Release/
+BUILT_PRODUCT_DIR=Products/Release/
 INSTALL_DIR=~/Library/Application\ Support/MacDown/PlugIns
 
-.PHONY: carthage build test install
+.PHONY: all carthage build test install
+
+all: carthage build
 
 carthage:
 	carthage update --platform macOS
 
 build:
-	xcodebuild $(XCODEFLAGS) | xcpretty
+	xcodebuild $(XCODEFLAGS) -configuration Release | xcpretty
 
 test:
-	xcodebuild test $(XCODEFLAGS) -configuration Travis | xcpretty
-
-install: build
-	cp -rf $(BUILT_PRODUCT_DIR)$(FULL_PRODUCT_NAME) $(INSTALL_DIR)
+	xcodebuild test $(XCODEFLAGS) -configuration Debug | xcpretty

@@ -51,7 +51,7 @@ Installation
 
 There are a few ways to install the plug-in:
 
-* `cd` into the directory and run `make install`.
+* `cd` into the directory and run `make`.
 * Build the 'Thesi' scheme in Xcode.
 
 

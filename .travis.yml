@@ -1,4 +1,4 @@
 language: swift
 osx_image: xcode10.1
 script:
-    - xcodebuild test -project Thesi.xcodeproj -scheme Thesi -destination 'platform=macOS'
+    - xcodebuild test -project Thesi.xcodeproj -scheme Thesi -destination 'platform=macOS' -configuration Travis

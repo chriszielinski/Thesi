@@ -3,3 +3,5 @@ osx_image: xcode10.1
 script:
     - carthage update --platform macOS
     - xcodebuild test -project Thesi.xcodeproj -scheme Thesi -destination 'platform=macOS' -configuration Travis | xcpretty
+after_success:
+  - bash <(curl -s https://codecov.io/bash)

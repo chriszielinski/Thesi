@@ -1,4 +1,4 @@
 language: swift
 osx_image: xcode10.1
 script:
-    - xcodebuild test -project Thesi.xcodeproj -scheme "Thesi Tests" -destination platform=macOS
+    - xcodebuild test-without-building -project Thesi.xcodeproj -scheme "Thesi Tests" -destination platform=macOS

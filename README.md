@@ -8,6 +8,8 @@ Thesi
 	<a href="https://sonarcloud.io/dashboard?id=chriszielinski_Thesi">
 		<img src="https://sonarcloud.io/api/project_badges/measure?project=chriszielinski_Thesi&metric=alert_status">
 	</a>
+	<a href="https://codebeat.co/projects/github-com-chriszielinski-thesi-master">
+		<img alt="codebeat badge" src="https://codebeat.co/badges/ee3d7da6-4a4d-4ebe-8750-442a8a69ed0f" />	</a>
 	<a href="https://codecov.io/gh/chriszielinski/Thesi">
 	  <img src="https://codecov.io/gh/chriszielinski/Thesi/branch/master/graph/badge.svg" />
 	</a>

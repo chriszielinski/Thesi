@@ -23,9 +23,9 @@ class ImageTests: ThesiTestCase {
         ThesiTest("Thesi does not center image.",
                   test: "!![Alternate text](http://google.com/images)",
                   expected: """
-                            <div style="text-align:center;">
+                            <p align="center">
                                 <img src="http://google.com/images" alt="Alternate text">
-                            </div>
+                            </p>
                             """)
     }
 
@@ -65,9 +65,9 @@ class ImageTests: ThesiTestCase {
         ThesiTest("Thesi does not center and set the width of the image.",
                   test: "!![Alternate text](http://google.com/images, width=100px)",
                   expected: """
-                            <div style="text-align:center;">
+                            <p align="center">
                                 <img src="http://google.com/images" alt="Alternate text" width="100px">
-                            </div>
+                            </p>
                             """)
     }
 
@@ -75,9 +75,9 @@ class ImageTests: ThesiTestCase {
         ThesiTest("Thesi does not center and set the width of the image.",
                   test: "!![Alternate text](http://google.com/images, height=100px)",
                   expected: """
-                            <div style="text-align:center;">
+                            <p align="center">
                                 <img src="http://google.com/images" alt="Alternate text" height="100px">
-                            </div>
+                            </p>
                             """)
     }
 
@@ -85,9 +85,9 @@ class ImageTests: ThesiTestCase {
         ThesiTest("",
                   test: "!![Alternate text](http://google.com/images, width=50px, height=200px)",
                   expected: """
-                            <div style="text-align:center;">
+                            <p align="center">
                                 <img src="http://google.com/images" alt="Alternate text" width="50px" height="200px">
-                            </div>
+                            </p>
                             """)
     }
 
@@ -95,9 +95,9 @@ class ImageTests: ThesiTestCase {
         ThesiTest("",
                   test: "!![Alternate text](http://google.com/images, height=200px, width=50px)",
                   expected: """
-                            <div style="text-align:center;">
+                            <p align="center">
                                 <img src="http://google.com/images" alt="Alternate text" width="50px" height="200px">
-                            </div>
+                            </p>
                             """)
     }
 
@@ -105,9 +105,9 @@ class ImageTests: ThesiTestCase {
         ThesiTest("",
                   test: "!![Alternate text](http://google.com/images, height=200 px, width=50 px)",
                   expected: """
-                            <div style="text-align:center;">
+                            <p align="center">
                                 <img src="http://google.com/images" alt="Alternate text" width="50 px" height="200 px">
-                            </div>
+                            </p>
                             """)
     }
 
@@ -115,9 +115,9 @@ class ImageTests: ThesiTestCase {
         ThesiTest("",
                   test: "!![Alternate text](\"http://google.com/images\", height=\"200px\", width=\"50px\")",
                   expected: """
-                            <div style="text-align:center;">
+                            <p align="center">
                                 <img src="http://google.com/images" alt="Alternate text" width="50px" height="200px">
-                            </div>
+                            </p>
                             """)
     }
 
@@ -125,9 +125,9 @@ class ImageTests: ThesiTestCase {
         ThesiTest("",
                   test: "!![Alternate text]( \"http://google.com/images\" ,  height = \"200px\"  , width = \"50px\"  )",
                   expected: """
-                            <div style="text-align:center;">
+                            <p align="center">
                                 <img src="http://google.com/images" alt="Alternate text" width="50px" height="200px">
-                            </div>
+                            </p>
                             """)
     }
 }

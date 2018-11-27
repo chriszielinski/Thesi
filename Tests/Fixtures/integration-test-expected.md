@@ -1,6 +1,6 @@
-<div style="text-align:center;">
+<p align="center">
     <img src="https://assets0.domestika.org/project-items/001/654/590/lorem_vector1-big.jpg?1467128298" alt="Lorem Ipsum Logo" height="200px">
-</div>
+</p>
 
 What is Lorem Ipsum? 
 --------------------

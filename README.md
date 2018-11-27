@@ -30,6 +30,8 @@ Features
 
 * Add callouts to your Markdown with a tag.
 * Easily specify dimensions and center alignment of images.
+* Supports MacDown undo/redo.
+* GitHub-Flavored Markdown friendly.
 
 
 Callouts
@@ -89,20 +91,20 @@ Centering an image is as simple as prepending an extra `!`.
 
 	!![Alternate text](/image/source)
 	
-Thesi will wrap the image in a center-aligned `<div>`.
+Thesi will nest the image in a center-aligned `<p>` element.
 
 ### Example
 
 Before Thesi:
 
-	!![Wow Gif](https://media2.giphy.com/media/12bSyZ2lLVvZ4s/giphy.gif?cid=3640f6095bfc2bf46a464d2e556566c8, height=300px)
+	!![Wow Gif](https://media2.giphy.com/media/12bSyZ2lLVvZ4s/giphy.gif, height=300px)
 	
 After Thesi:
 
-	<div style="text-align:center;">
-	    <img src="https://media2.giphy.com/media/12bSyZ2lLVvZ4s/giphy.gif?cid=3640f6095bfc2bf46a464d2e556566c8" alt="Wow Gif" height="300px">
-	</div>
+	<p align="center">
+    	<img src="https://media2.giphy.com/media/12bSyZ2lLVvZ4s/giphy.gif" alt="Wow Gif" height="300px">
+	</p>
 
-<div style="text-align:center;">
-    <img src="https://media2.giphy.com/media/12bSyZ2lLVvZ4s/giphy.gif?cid=3640f6095bfc2bf46a464d2e556566c8" alt="Wow Gif" height="300px">
-</div>
+<p align="center">
+    <img src="https://media2.giphy.com/media/12bSyZ2lLVvZ4s/giphy.gif" alt="Wow Gif" height="300px">
+</p>

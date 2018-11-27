@@ -75,9 +75,9 @@ extension MarkdownImage: RegexReplaceable {
 
         if isCentered {
             return """
-            \(indent)<div style=\"text-align:center;\">
+            \(indent)<p align="center">
             \(indent)    \(imageHTML)
-            \(indent)</div>
+            \(indent)</p>
             """
         } else {
             return indent + imageHTML

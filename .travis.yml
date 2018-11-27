@@ -1,14 +1,19 @@
 language: swift
 osx_image: xcode10.1
-
 addons:
   sonarcloud:
-    organization: "chriszielinski-github"
-
+    organization: chriszielinski-github
 script:
-    - make carthage
-    - make test
-    - swiftlint
-    - sonar-scanner
+- make carthage
+- make test
+- swiftlint
+- sonar-scanner
 after_success:
-  - bash <(curl -s https://codecov.io/bash)
+- bash <(curl -s https://codecov.io/bash)
+deploy:
+  provider: releases
+  api_key:
+    secure: UzjZIMCYg1H7OXmrETVVXFMOII8FKMcZi0nE4/DITyxr+34+qoVDBemLZUENFEDlVINrNZGhVyQ9cz5pMz3y20PmmJUZIgTEp0pHrA6z3kYBmhoO9lPL5i8elXKufDcjZ7y1PtFvWAeZfcbTDEtG1Fj2HMy2b+0Opp5qyjA8M62uS0hil2xnDmRnzfu6jRrRdIC63aC4lfe1Bq5d9kS9/B2xjwy5GLU8WfssMpCz/Luop8vWd7VGfP3TMtb/bc2YSkq4Av6f20sCT7HxUJ3407eUVij5ybtz0sMDQIXsrZksHyrCJatYle8Aqk7139t6JiAuJw+7o4CkHmVwmRHmOWvW7//bWyPeKkM6N8vjiE1mneHFNxRxeJvhFSDPZ9BrtrXA3hR+dWsnJOj0nHqYiykFy6Z04GRMEQE2yhavahaKD5dRVPHtwR35az1le+nxDnDuD7ayVvcmlrIFLlMrCQ+GDv7ir2U9+CpNfTr6id90phLov7EI2MnJZg/YdbaF4nTVocuxMRZXE9o6Ucvo0IOw9Db0HXZQ/voNoy5+DlMFtROY+Rbx12J/3PIAVZ0TFKzz2iAfmIlCzqlI6VV/hrncoF0sXsH3thfHkIkRsdL1vYbuJ3mEYOPCIt+HT/epjKxCj6JjMXwoEFztnxyTxTFxnTTcwHyPo4ve3BXgsJE=
+  file: "./build/Release/Thesi.plugin"
+  on:
+    repo: chriszielinski/Thesi

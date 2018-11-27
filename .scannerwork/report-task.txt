@@ -1,0 +1,7 @@
+organization=chriszielinski-github
+projectKey=chriszielinski_Thesi
+serverUrl=https://sonarcloud.io
+serverVersion=7.5.0.19640
+dashboardUrl=https://sonarcloud.io/dashboard?id=chriszielinski_Thesi
+ceTaskId=AWdWGI6YB8RgVpGod3oS
+ceTaskUrl=https://sonarcloud.io/api/ce/task?id=AWdWGI6YB8RgVpGod3oS

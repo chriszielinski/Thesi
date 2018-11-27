@@ -25,7 +25,7 @@
       </PostActions>
       <BuildActionEntries>
          <BuildActionEntry
-            buildForTesting = "YES"
+            buildForTesting = "NO"
             buildForRunning = "YES"
             buildForProfiling = "YES"
             buildForArchiving = "YES"
@@ -46,7 +46,26 @@
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
       shouldUseLaunchSchemeArgsEnv = "YES">
       <Testables>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "1426455721A8C1AB00678186"
+               BuildableName = "Thesi Tests.xctest"
+               BlueprintName = "Thesi Tests"
+               ReferencedContainer = "container:Thesi.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
       </Testables>
+      <MacroExpansion>
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "1482F88021A5D36800CF0C6C"
+            BuildableName = "Thesi.plugin"
+            BlueprintName = "Thesi"
+            ReferencedContainer = "container:Thesi.xcodeproj">
+         </BuildableReference>
+      </MacroExpansion>
       <AdditionalOptions>
       </AdditionalOptions>
    </TestAction>
@@ -62,6 +81,7 @@
       allowLocationSimulation = "YES">
       <PathRunnable
          runnableDebuggingMode = "0"
+         BundleIdentifier = "com.uranusjr.macdown"
          FilePath = "/Applications/MacDown.app">
       </PathRunnable>
       <MacroExpansion>

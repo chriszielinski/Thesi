@@ -2,6 +2,12 @@ Thesi
 =====
  
 <p align="center">
+	<a href="https://travis-ci.org/chriszielinski/Thesi">
+		<img src="https://travis-ci.org/chriszielinski/Thesi.svg?branch=master">
+	</a>
+	<a href="https://codecov.io/gh/chriszielinski/Thesi">
+	  <img src="https://codecov.io/gh/chriszielinski/Thesi/branch/master/graph/badge.svg" />
+	</a>
 	<a href="https://developer.apple.com/swift" style="text-decoration:none">
 		<img alt="Swift Version" src ="https://img.shields.io/badge/language-swift%204.2-brightgreen.svg"/>
 	</a>

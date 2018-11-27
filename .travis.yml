@@ -8,6 +8,7 @@ addons:
 script:
     - carthage update --platform macOS
     - xcodebuild test -project Thesi.xcodeproj -scheme Thesi -destination 'platform=macOS' -configuration Travis | xcpretty
+    - swiftlint
     - sonar-scanner
 after_success:
   - bash <(curl -s https://codecov.io/bash)

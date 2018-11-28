@@ -16,6 +16,7 @@ enum MarkdownCallout: String, CaseIterable {
     case important
     case fire
     case bug
+    case why
 
     //swiftlint:disable:next force_try
     static let regex: Regex = try! Regex(pattern: "^( *)< *(\\w+) *> *",
@@ -49,6 +50,8 @@ enum MarkdownCallout: String, CaseIterable {
             return "🔥"
         case .bug:
             return "🐞"
+        case .why:
+            return "🤔"
         }
     }
 

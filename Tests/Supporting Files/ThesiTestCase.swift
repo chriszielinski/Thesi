@@ -1,6 +1,6 @@
 //
 //  ThesiTestCase.swift
-//  Thesi Tests
+//  Thesi 🧝‍♀️ Tests
 //
 //  Created by Chris Zielinski on 11/23/18.
 //  Copyright © 2018 Big Z Labs. All rights reserved.

@@ -1,6 +1,6 @@
 //
 //  IntegrationTests.swift
-//  Thesi Tests
+//  Thesi 🧝‍♀️ Tests
 //
 //  Created by Chris Zielinski on 11/24/18.
 //  Copyright © 2018 Big Z Labs. All rights reserved.

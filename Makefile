@@ -5,7 +5,7 @@ FULL_PRODUCT_NAME=Thesi.plugin
 BUILT_PRODUCT_DIR=Products/Release/
 INSTALL_DIR=~/Library/Application\ Support/MacDown/PlugIns
 
-.PHONY: all carthage build test install archive
+.PHONY: all carthage build test archive
 
 all: carthage build
 

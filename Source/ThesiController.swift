@@ -1,6 +1,6 @@
 //
 //  ThesiController.swift
-//  Thesi
+//  Thesi 🧝‍♀️
 //
 //  Created by Chris Zielinski on 11/21/18.
 //  Copyright © 2018 Big Z Labs. All rights reserved.
@@ -18,7 +18,7 @@ public class ThesiController: NSObject {
 
     @objc
     public var name: String {
-        return "Thesi"
+        return "Thesi 🧝‍♀️"
     }
 
     @objc(run:)

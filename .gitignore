@@ -6,6 +6,7 @@
 build/
 DerivedData/
 Products/
+testResults/
 
 ## Various settings
 *.pbxuser

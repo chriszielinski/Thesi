@@ -51,8 +51,9 @@ Installation
 
 There are a few ways to install the plug-in:
 
-* `cd` into the directory and run `make`.
+* `cd` into the project directory and run `make`.
 * Build the 'Thesi' scheme in Xcode.
+* Download the [latest release](https://github.com/chriszielinski/Thesi/releases/latest) and put it inside `~/Library/Application Support/MacDown/PlugIns`
 
 
 Callouts

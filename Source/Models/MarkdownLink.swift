@@ -39,6 +39,6 @@ struct MarkdownLink {
 
 extension MarkdownLink: RegexReplaceable {
     var replacementMarkdownString: String {
-        return "<a href=\"\(url)\" target=\"_blank\">\(text)</a>"
+        return "\(indent)<a href=\"\(url)\" target=\"_blank\">\(text)</a>"
     }
 }

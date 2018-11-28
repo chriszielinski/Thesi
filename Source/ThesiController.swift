@@ -13,7 +13,8 @@ public class ThesiController: NSObject {
 
     static let regexReplaceableClasses: [RegexReplaceable.Type] = [
         MarkdownImage.self,
-        MarkdownCallout.self
+        MarkdownCallout.self,
+        MarkdownLink.self
     ]
 
     @objc

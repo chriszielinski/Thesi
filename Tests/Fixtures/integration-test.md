@@ -3,28 +3,28 @@
 What is Lorem Ipsum? 
 --------------------
 
-<Note> This is a note. 👍
+<Note> This is a note $[callout](https://en.wikipedia.org/wiki/Callout). 👍
 
-Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+$[Lorem Ipsum](https://www.lipsum.com) is simply dummy text of the printing and typesetting industry.
 
-<Warning> This is a warning.
+<Warning> This is a warning callout.
 
 Where does it come from?
 ------------------------
 
-<Try   > This is a try. 👌
+<Try   > This is a try callout. 👌
 
-Contrary to popular belief, Lorem Ipsum is not simply random text.
+Contrary to popular belief, [Lorem Ipsum](https://www.lipsum.com) is not simply random text.
 
-<  Important   > This is a important.
+<  Important   > This is an important callout.
 
 It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old.
 
- <Fire > This is a fire.
+ <Fire > This is a fire callout.
  
  Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source.
 
-< Bug> This is a bug.
+< Bug> This is a bug callout.
 
 `<Bug> This one won't work.`
 

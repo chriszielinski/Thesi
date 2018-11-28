@@ -24,7 +24,7 @@ Thesi 🧝‍♀️
 	<img src ="./readme-assets/thesi.gif"/>
 	<br>
 	<br>
-	<b>A <a href="https://macdown.uranusjr.com">MacDown</a> plugin that offers shorthand syntax for callouts and images.</b>
+	<b>A <a href="https://macdown.uranusjr.com" target="_blank">MacDown</a> plugin that offers shorthand syntax for callouts, images, and links.</b>
 	<br>
 </p>
 
@@ -32,15 +32,17 @@ Thesi 🧝‍♀️
 
 ### Looking for...
 
-- A Floating Action Button for macOS? Check out [Fab.](https://github.com/chriszielinski/Fab) 🛍️.
-- An Expanding Bubble Text Field for macOS? Check out [BubbleTextField](https://github.com/chriszielinski/BubbleTextField) 💬.
-- An integrated spotlight-based onboarding and help library for macOS? Check out [Enlighten](https://github.com/chriszielinski/Enlighten) 💡.
+- A guide/template to build your own Swift MacDown plug-in? Check out <a href="https://github.com/chriszielinski/MacDown-Swift-Plug-In" target="_blank">MacDown-Swift-Plug-In</a>.
+- A Floating Action Button for macOS? Check out <a href="https://github.com/chriszielinski/Fab" target="_blank">Fab.</a> 🛍️.
+- An Expanding Bubble Text Field for macOS? Check out <a href="https://github.com/chriszielinski/BubbleTextField" target="_blank">BubbleTextField</a> 💬.
+- An integrated spotlight-based onboarding and help library for macOS? Check out <a href="https://github.com/chriszielinski/Enlighten" target="_blank">Enlighten</a> 💡.
 
 
 Features
 ========
 
 * Add callouts to your Markdown with a tag.
+* Make Markdown links open in new tabs.
 * Easily specify dimensions and center alignment of images.
 * Supports MacDown undo/redo.
 * GitHub-Flavored Markdown friendly.
@@ -53,7 +55,7 @@ There are a few ways to install the plug-in:
 
 * `cd` into the project directory and run `make`.
 * Build the 'Thesi' scheme in Xcode.
-* Download the [latest release](https://github.com/chriszielinski/Thesi/releases/latest) and put it inside `~/Library/Application Support/MacDown/PlugIns`
+* Download the <a href="https://github.com/chriszielinski/Thesi/releases/latest" target="_blank">latest release</a> and put it inside `~/Library/Application Support/MacDown/PlugIns`
 
 
 Callouts
@@ -88,6 +90,20 @@ The currently available callouts are:
 > 🔥 This is a fire callout.
 
 > 🐞 **Bug:** This is a bug callout.
+
+
+Links
+======
+
+> 📣 **Important:** Your flavor of Markdown must support raw HTML.
+
+Want your Markdown links to open in a new tab? No problem, just prepend your normal Markdown links with a `$` and Thesi will do the rest.
+
+    $[Text](URL)
+	
+After Thesi:
+	
+    <a href="URL" target="_blank">Text</a>
 
 
 Images

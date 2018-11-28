@@ -21,10 +21,10 @@ Thesi 🧝‍♀️
 		<img alt="GitHub license" src ="https://img.shields.io/badge/license-MIT-blue.svg"/>
 	</a>
 	<br>
-	<img src ="./readme-assets/thesi.gif"/>
+	<img src ="https://raw.githubusercontent.com/chriszielinski/Thesi/master/readme-assets/thesi.gif"/>
 	<br>
 	<br>
-	<b>A <a href="https://macdown.uranusjr.com" target="_blank">MacDown</a> plugin that offers shorthand syntax for callouts, images, and links.</b>
+	<b>A <a href="https://macdown.uranusjr.com">MacDown</a> plugin that offers shorthand syntax for callouts, images, and links.</b>
 	<br>
 </p>
 
@@ -32,10 +32,10 @@ Thesi 🧝‍♀️
 
 ### Looking for...
 
-- A guide/template to build your own Swift MacDown plug-in? Check out <a href="https://github.com/chriszielinski/MacDown-Swift-Plug-In" target="_blank">MacDown-Swift-Plug-In</a>.
-- A Floating Action Button for macOS? Check out <a href="https://github.com/chriszielinski/Fab" target="_blank">Fab.</a> 🛍️.
-- An Expanding Bubble Text Field for macOS? Check out <a href="https://github.com/chriszielinski/BubbleTextField" target="_blank">BubbleTextField</a> 💬.
-- An integrated spotlight-based onboarding and help library for macOS? Check out <a href="https://github.com/chriszielinski/Enlighten" target="_blank">Enlighten</a> 💡.
+- A guide/template to build your own Swift MacDown plug-in? Check out [MacDown-Swift-Plug-In](https://github.com/chriszielinski/MacDown-Swift-Plug-In).
+- A Floating Action Button for macOS? Check out [Fab.](https://github.com/chriszielinski/Fab) 🛍️.
+- An Expanding Bubble Text Field for macOS? Check out [BubbleTextField](https://github.com/chriszielinski/BubbleTextField) 💬.
+- An integrated spotlight-based onboarding and help library for macOS? Check out [Enlighten](https://github.com/chriszielinski/Enlighten) 💡.
 
 
 Features
@@ -55,7 +55,7 @@ There are a few ways to install the plug-in:
 
 * `cd` into the project directory and run `make`.
 * Build the 'Thesi' scheme in Xcode.
-* Download the <a href="https://github.com/chriszielinski/Thesi/releases/latest" target="_blank">latest release</a> and put it inside `~/Library/Application Support/MacDown/PlugIns`
+* Download the [latest release](https://github.com/chriszielinski/Thesi/releases/latest) and put it inside `~/Library/Application Support/MacDown/PlugIns`
 
 
 Callouts
@@ -96,6 +96,8 @@ Links
 ======
 
 > 📣 **Important:** Your flavor of Markdown must support raw HTML.
+
+> ⚠️ **Warning:** Not supported by GitHub-flavored Markdown.
 
 Want your Markdown links to open in a new tab? No problem, just prepend your normal Markdown links with a `$` and Thesi will do the rest.
 

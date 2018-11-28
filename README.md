@@ -8,11 +8,11 @@ Thesi 🧝‍♀️
 	<a href="https://sonarcloud.io/dashboard?id=chriszielinski_Thesi" style="text-decoration:none" target="_blank">
 		<img src="https://sonarcloud.io/api/project_badges/measure?project=chriszielinski_Thesi&metric=alert_status">
 	</a>
+	<a href="https://sonarcloud.io/component_measures?id=chriszielinski_Thesi&metric=Coverage" style="text-decoration:none" target="_blank">
+	  <img src="https://sonarcloud.io/api/project_badges/measure?project=chriszielinski_Thesi&metric=coverage">
+	</a>
 	<a href="https://codebeat.co/projects/github-com-chriszielinski-thesi-master" style="text-decoration:none" target="_blank">
 		<img alt="codebeat badge" src="https://codebeat.co/badges/ee3d7da6-4a4d-4ebe-8750-442a8a69ed0f">
-	</a>
-	<a href="https://codecov.io/gh/chriszielinski/Thesi" style="text-decoration:none" target="_blank">
-	  <img src="https://codecov.io/gh/chriszielinski/Thesi/branch/master/graph/badge.svg">
 	</a>
 	<a href="https://developer.apple.com/swift" style="text-decoration:none" target="_blank">
 		<img alt="Swift Version" src ="https://img.shields.io/badge/language-swift%204.2-brightgreen.svg"/>

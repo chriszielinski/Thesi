@@ -5,7 +5,7 @@ addons:
     organization: chriszielinski-github
 script:
   - make
-  - make test
+  - make travis-test
   - swiftlint
   - sonar-scanner
 after_success:

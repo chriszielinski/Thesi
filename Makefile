@@ -15,10 +15,16 @@ carthage:
 build:
 	xcodebuild $(XCODEFLAGS) -configuration Release | xcpretty
 
-test:
-	xcodebuild test $(XCODEFLAGS) -configuration Debug | xcpretty
+test: clean-test
+	xcodebuild test $(XCODEFLAGS) -configuration Debug -resultBundlePath testResults | xcpretty
+
+travis-test: test
+	./xccov-to-sonarqube-generic.sh testResults/1_Test/action.xccovarchive/ > testResults/sonarqube-generic-coverage.xml
 
 archive:
 	cd $(BUILT_PRODUCT_DIR); \
 	zip -FSr -1 $(FULL_PRODUCT_NAME).zip $(FULL_PRODUCT_NAME);
 	echo "Built distribution zip file: $(BUILT_PRODUCT_DIR)$(FULL_PRODUCT_NAME).zip"
+
+clean-test:
+	rm -rf ./testResults

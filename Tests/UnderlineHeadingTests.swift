@@ -39,6 +39,18 @@ class UnderlineHeadingTests: ThesiTestCase {
                             """)
     }
 
+    func testMinimumHeading() {
+        ThesiTest("Thesi does not format minimum underline heading.",
+                  test: """
+                        H1
+                        =
+                        """,
+                  expected: """
+                            H1
+                            ==
+                            """)
+    }
+
     func testIndentedHeading() {
         ThesiTest("Thesi does not format indented underline heading.",
                   test: """

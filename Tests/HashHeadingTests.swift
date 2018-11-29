@@ -33,6 +33,17 @@ class HashHeadingTests: ThesiTestCase {
                             """)
     }
 
+    func testMinimumHashHeading() {
+        ThesiTest("Thesi does not format minimum hash heading.",
+                  test: """
+                        # H
+                        """,
+                  expected: """
+                            H
+                            =
+                            """)
+    }
+
     func testIndentedOneHashHeading() {
         ThesiTest("Thesi does not convert # heading.",
                   test: "  # Heading 1",

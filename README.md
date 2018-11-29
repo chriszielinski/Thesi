@@ -24,7 +24,7 @@ Thesi 🧝‍♀️
 	<img src ="https://raw.githubusercontent.com/chriszielinski/Thesi/master/readme-assets/thesi.gif"/>
 	<br>
 	<br>
-	<b>A <a href="https://macdown.uranusjr.com">MacDown</a> plugin that offers shorthand syntax for callouts, images, and links.</b>
+	<b>A <a href="https://macdown.uranusjr.com">MacDown</a> plugin that formats your headings and offers shorthand syntax for callouts, images, and links.</b>
 	<br>
 </p>
 
@@ -56,6 +56,12 @@ There are a few ways to install the plug-in:
 * `cd` into the project directory and run `make`.
 * Build the 'Thesi' scheme in Xcode.
 * Download the [latest release](https://github.com/chriszielinski/Thesi/releases/latest) and put it inside `~/Library/Application Support/MacDown/PlugIns`
+
+
+Headings
+========
+
+Thesi will convert any `#` and `##` headings to their respective underline headings, and ensure any existing underline headings are pretty (contain the perfect number of `=` or `-`). Nothing fancy.
 
 
 Callouts

@@ -42,10 +42,11 @@ Features
 ========
 
 * Add callouts to your Markdown with a tag.
+* Beautifies H1 & H2 headings.
 * Make Markdown links open in new tabs.
 * Easily specify dimensions and center alignment of images.
 * Supports MacDown undo/redo.
-* GitHub-Flavored Markdown friendly.
+* GitHub-flavored Markdown friendly (except where noted).
 
 
 Installation

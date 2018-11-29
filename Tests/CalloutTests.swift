@@ -15,10 +15,11 @@ class CalloutTests: ThesiTestCase {
     }
 
     func testCallout() {
-        for callout in MarkdownCallout.allCases {
+        for callout in MarkdownCallout.Callout.allCases {
+            let markdownCallout = MarkdownCallout(callout: callout)
             ThesiTest("Thesi does not convert '\(callout.name)' callout.",
                       test: "<\(callout.rawValue)> This is a `\(callout.name)` callout.",
-                      expected: "\(callout.replacementMarkdownString)This is a `\(callout.name)` callout.")
+                      expected: "\(markdownCallout.replacementMarkdownString)This is a `\(callout.name)` callout.")
         }
     }
 
@@ -43,18 +44,20 @@ class CalloutTests: ThesiTestCase {
     func testIndentedCallout() {
         ThesiTest("Thesi does not convert indented callout.",
                   test: " <Bug> This is a bug.",
-                  expected: "> 🐞 **Bug:** This is a bug.")
+                  expected: " > 🐞 **Bug:** This is a bug.")
     }
 
     func testIndentedWeirdCallout() {
         ThesiTest("Thesi does not convert indented, weird callout.",
                   test: "  < Bug  > This is a bug.",
-                  expected: "> 🐞 **Bug:** This is a bug.")
+                  expected: "  > 🐞 **Bug:** This is a bug.")
     }
 
     func testCalloutInCodeBlock() {
-        ThesiTest("Thesi converts callout in a code block.",
+        ThesiTest("Thesi converts callout in a (spaced) code block.",
                   test: "    < Bug> This is a bug.")
+        ThesiTest("Thesi converts callout in a (tabbed) code block.",
+                  test: "\t< Bug> This is a bug.")
     }
 
     func testCalloutInCodeVoice() {

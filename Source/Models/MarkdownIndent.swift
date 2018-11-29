@@ -10,6 +10,8 @@ import Foundation
 
 struct MarkdownIndent {
 
+    static let none: MarkdownIndent = MarkdownIndent(matchSubstring: "")
+
     enum IndentCharacter: String {
         case space = " "
         case tab = "\t"

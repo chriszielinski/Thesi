@@ -9,45 +9,57 @@
 import Foundation
 import Regex
 
-enum MarkdownCallout: String, CaseIterable {
-    case note
-    case warning
-    case `try`
-    case important
-    case fire
-    case bug
-    case why
+struct MarkdownCallout {
 
-    var usesTitle: Bool {
-        switch self {
-        case .fire:
-            return false
-        default:
-            return true
+    enum Callout: String, CaseIterable {
+        case note
+        case warning
+        case `try`
+        case important
+        case fire
+        case bug
+        case why
+
+        var usesTitle: Bool {
+            switch self {
+            case .fire:
+                return false
+            default:
+                return true
+            }
         }
+
+        var name: String {
+            return String(rawValue.first!).uppercased() + rawValue.dropFirst()
+        }
+
+        var emoji: String {
+            switch self {
+            case .note:
+                return "📌"
+            case .warning:
+                return "⚠️"
+            case .try:
+                return "🎡"
+            case .important:
+                return "📣"
+            case .fire:
+                return "🔥"
+            case .bug:
+                return "🐞"
+            case .why:
+                return "🤔"
+            }
+        }
+
     }
 
-    var name: String {
-        return String(rawValue.first!).uppercased() + rawValue.dropFirst()
-    }
+    let indent: MarkdownIndent
+    let callout: Callout
 
-    var emoji: String {
-        switch self {
-        case .note:
-            return "📌"
-        case .warning:
-            return "⚠️"
-        case .try:
-            return "🎡"
-        case .important:
-            return "📣"
-        case .fire:
-            return "🔥"
-        case .bug:
-            return "🐞"
-        case .why:
-            return "🤔"
-        }
+    init(callout: Callout) {
+        indent = .none
+        self.callout = callout
     }
 
 }
@@ -55,23 +67,25 @@ enum MarkdownCallout: String, CaseIterable {
 extension MarkdownCallout: RegexReplaceable {
 
     //swiftlint:disable:next force_try
-    static let regex: Regex = try! Regex(pattern: "^( *)< *(\\w+) *> *",
+    static let regex: Regex = try! Regex(pattern: "^([ \t]*)< *(\\w+) *> *",
                                          options: [.anchorsMatchLines, .useUnicodeWordBoundaries],
                                          groupNames: [])
 
     var replacementMarkdownString: String {
-        let titleMarkdown = usesTitle ? " **" + name + ":**" : ""
-        return "> \(emoji)\(titleMarkdown) "
+        let titleMarkdown = callout.usesTitle ? " **" + callout.name + ":**" : ""
+        return "\(indent.stringValue)> \(callout.emoji)\(titleMarkdown) "
     }
 
     init?(match: Match) {
-        let indentCount = match.group(at: 1)?.count ?? 0
+        indent = MarkdownIndent(matchSubstring: match.group(at: 1))
+        let calloutCapture = match.group(at: 2)!
+
         // Make sure it isn't inside a code block.
-        guard indentCount < 4,
-            let calloutCaptureGroup = match.group(at: 2)
+        guard !indent.isCodeBlock,
+            let callout = Callout(rawValue: calloutCapture.lowercased())
             else { return nil }
 
-        self.init(rawValue: calloutCaptureGroup.lowercased())
+        self.callout = callout
     }
 
 }

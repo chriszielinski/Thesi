@@ -19,7 +19,7 @@ struct MarkdownImage {
         case properties
     }
 
-    let indent: String
+    let indent: MarkdownIndent
     let isCentered: Bool
     let alternateText: String
     let url: String
@@ -31,7 +31,7 @@ struct MarkdownImage {
 extension MarkdownImage: RegexReplaceable {
 
     //swiftlint:disable force_try
-    static let regex = try! Regex(pattern: "^( *)!(!)?\\[(.+?)\\] *\\( *\"?(.+?)\"? *(,.+)?\\)",
+    static let regex = try! Regex(pattern: "^([ \t]*)!(!)?\\[(.+?)\\] *\\( *\"?(.+?)\"? *(,.+)?\\)",
                                   options: [.anchorsMatchLines],
                                   groupNames: RegexGroupKey.allRawValues)
     static let widthRegex = try! Regex(pattern: "width *= *\"?([^,\"]+)\"?",
@@ -57,20 +57,20 @@ extension MarkdownImage: RegexReplaceable {
 
         if isCentered {
             return """
-            \(indent)<p align="center">
-            \(indent)    \(imageHTML)
-            \(indent)</p>
+            \(indent.stringValue)<p align="center">
+            \(indent.stringValue)    \(imageHTML)
+            \(indent.stringValue)</p>
             """
         } else {
-            return indent + imageHTML
+            return indent.stringValue + imageHTML
         }
     }
 
     init?(match: Match) {
-        indent = match.group(named: RegexGroupKey.indent.rawValue) ?? ""
+        indent = MarkdownIndent(matchSubstring: match.group(named: RegexGroupKey.indent.rawValue))
 
         // Make sure it isn't inside a code block.
-        guard indent.count < 4
+        guard !indent.isCodeBlock
             else { return nil }
 
         isCentered = match.group(named: RegexGroupKey.centerAlign.rawValue) != nil

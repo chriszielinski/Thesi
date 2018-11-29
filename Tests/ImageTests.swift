@@ -131,4 +131,11 @@ class ImageTests: ThesiTestCase {
                             """)
     }
 
+    func testCenterImageInCodeBlock() {
+        ThesiTest("Thesi does center image in (spaced) code block.",
+                  test: "    !![Alternate text](http://google.com/images)")
+        ThesiTest("Thesi does center image in (tabbed) code block.",
+                  test: "\t!![Alternate text](http://google.com/images)")
+    }
+
 }

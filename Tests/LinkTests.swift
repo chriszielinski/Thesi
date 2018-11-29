@@ -44,8 +44,10 @@ class LinkTests: ThesiTestCase {
     }
 
     func testLinkInCodeBlock() {
-        ThesiTest("Thesi converts link in code block.",
+        ThesiTest("Thesi converts link in (spaced) code block.",
                   test: "    $[Alternate text](http://google.com/images)")
+        ThesiTest("Thesi converts link in (tabbed) code block.",
+                  test: "\t$[Alternate text](http://google.com/images)")
     }
 
     func testCommonMarkImage() {

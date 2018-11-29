@@ -17,7 +17,7 @@ struct MarkdownLink {
         case url
     }
 
-    let indent: String
+    let indent: MarkdownIndent
     let text: String
     let url: String
 
@@ -26,19 +26,19 @@ struct MarkdownLink {
 extension MarkdownLink: RegexReplaceable {
 
     //swiftlint:disable:next force_try
-    static let regex = try! Regex(pattern: "( *)\\$\\[([^\\]]*)\\] *\\( *\"?([^\\)\"]*)\"? *\\)",
+    static let regex = try! Regex(pattern: "([ \t]*)\\$\\[([^\\]]*)\\] *\\( *\"?([^\\)\"]*)\"? *\\)",
                                   options: [.dotMatchesLineSeparators],
                                   groupNames: RegexGroupKey.allRawValues)
 
     var replacementMarkdownString: String {
-        return "\(indent)<a href=\"\(url)\" target=\"_blank\">\(text)</a>"
+        return "\(indent.stringValue)<a href=\"\(url)\" target=\"_blank\">\(text)</a>"
     }
 
     init?(match: Match) {
-        indent = match.group(named: RegexGroupKey.indent.rawValue) ?? ""
+        indent = MarkdownIndent(matchSubstring: match.group(named: RegexGroupKey.indent.rawValue))
 
         // Make sure it isn't inside a code block.
-        guard indent.count < 4
+        guard !indent.isCodeBlock
             else { return nil }
 
         text = match.group(named: RegexGroupKey.text.rawValue) ?? ""

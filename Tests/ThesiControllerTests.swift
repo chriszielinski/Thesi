@@ -17,7 +17,8 @@ class ThesiControllerTests: XCTestCase {
         dynamic var editor: NSTextView?
 
         init(markdownFilename: String) {
-            let url = Bundle.init(for: ThesiControllerTests.self).url(forResource: markdownFilename, withExtension: "md")!
+            let url = Bundle.init(for: ThesiControllerTests.self)
+                .url(forResource: markdownFilename, withExtension: "md")!
             // swiftlint:disable:next force_try
             markdown = try! String(contentsOf: url)
         }

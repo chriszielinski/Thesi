@@ -1,7 +1,6 @@
 !![Lorem Ipsum Logo](https://assets0.domestika.org/project-items/001/654/590/lorem_vector1-big.jpg?1467128298, height=200px)
 
-What is Lorem Ipsum? 
---------------------
+# What is Lorem Ipsum? 
 
 <Note> This is a note $[callout](https://en.wikipedia.org/wiki/Callout). 👍
 
@@ -10,7 +9,7 @@ $[Lorem Ipsum](https://www.lipsum.com) is simply dummy text of the printing and 
 <Warning> This is a warning callout.
 
 Where does it come from?
-------------------------
+----
 
 <Try   > This is a try callout. 👌
 

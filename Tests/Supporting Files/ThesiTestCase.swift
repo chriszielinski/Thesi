@@ -35,6 +35,7 @@ class ThesiTestCase: XCTestCase {
 
             Expected Output:
             "\(expectedMarkdown)"
+
             """
         XCTAssertTrue(testMarkdown == expectedMarkdown, failureMessage)
     }

@@ -22,6 +22,16 @@
 		1426456B21A8C4C300678186 /* Regex.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 1482F8B621A5F9BD00CF0C6C /* Regex.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		1426456D21A927C600678186 /* ImageTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1426456C21A927C600678186 /* ImageTests.swift */; };
 		1426456F21A92D4F00678186 /* ThesiTestCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1426456E21A92D4E00678186 /* ThesiTestCase.swift */; };
+		14491B3C21AFA6FA0051469B /* MarkdownHashHeading.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14491B3B21AFA6FA0051469B /* MarkdownHashHeading.swift */; };
+		14491B3D21AFA6FA0051469B /* MarkdownHashHeading.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14491B3B21AFA6FA0051469B /* MarkdownHashHeading.swift */; };
+		14491B3F21AFAC890051469B /* HashHeadingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14491B3E21AFAC890051469B /* HashHeadingTests.swift */; };
+		14491B4121AFB27E0051469B /* MarkdownIndent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14491B4021AFB27E0051469B /* MarkdownIndent.swift */; };
+		14491B4221AFB27E0051469B /* MarkdownIndent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14491B4021AFB27E0051469B /* MarkdownIndent.swift */; };
+		14491B4521AFB2D40051469B /* MarkdownHeading.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14491B4421AFB2D40051469B /* MarkdownHeading.swift */; };
+		14491B4621AFB2D40051469B /* MarkdownHeading.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14491B4421AFB2D40051469B /* MarkdownHeading.swift */; };
+		14491B4821AFB3310051469B /* MarkdownUnderlineHeading.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14491B4721AFB3310051469B /* MarkdownUnderlineHeading.swift */; };
+		14491B4921AFB3310051469B /* MarkdownUnderlineHeading.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14491B4721AFB3310051469B /* MarkdownUnderlineHeading.swift */; };
+		14491B4B21AFB6590051469B /* UnderlineHeadingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14491B4A21AFB6590051469B /* UnderlineHeadingTests.swift */; };
 		1482F89121A5E49C00CF0C6C /* ThesiController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1482F88B21A5D3B100CF0C6C /* ThesiController.swift */; };
 		1482F8BA21A60EB000CF0C6C /* Regex.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1482F8B621A5F9BD00CF0C6C /* Regex.framework */; };
 		1482F8BB21A60EB800CF0C6C /* Regex.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 1482F8B621A5F9BD00CF0C6C /* Regex.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
@@ -69,6 +79,12 @@
 		1426455C21A8C1AB00678186 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1426456C21A927C600678186 /* ImageTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageTests.swift; sourceTree = "<group>"; };
 		1426456E21A92D4E00678186 /* ThesiTestCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThesiTestCase.swift; sourceTree = "<group>"; };
+		14491B3B21AFA6FA0051469B /* MarkdownHashHeading.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarkdownHashHeading.swift; sourceTree = "<group>"; };
+		14491B3E21AFAC890051469B /* HashHeadingTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HashHeadingTests.swift; sourceTree = "<group>"; };
+		14491B4021AFB27E0051469B /* MarkdownIndent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarkdownIndent.swift; sourceTree = "<group>"; };
+		14491B4421AFB2D40051469B /* MarkdownHeading.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarkdownHeading.swift; sourceTree = "<group>"; };
+		14491B4721AFB3310051469B /* MarkdownUnderlineHeading.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarkdownUnderlineHeading.swift; sourceTree = "<group>"; };
+		14491B4A21AFB6590051469B /* UnderlineHeadingTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnderlineHeadingTests.swift; sourceTree = "<group>"; };
 		1480FB0E21AD1E4E006ABE10 /* travis.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = travis.xcconfig; sourceTree = "<group>"; };
 		1482F88121A5D36800CF0C6C /* Thesi.plugin */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Thesi.plugin; sourceTree = BUILT_PRODUCTS_DIR; };
 		1482F88421A5D36800CF0C6C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -126,11 +142,23 @@
 				1426455A21A8C1AB00678186 /* CalloutTests.swift */,
 				1426456C21A927C600678186 /* ImageTests.swift */,
 				1423D85321A9DB340013A457 /* ThesiControllerTests.swift */,
+				14491B3E21AFAC890051469B /* HashHeadingTests.swift */,
+				14491B4A21AFB6590051469B /* UnderlineHeadingTests.swift */,
 				14AADEA621AF420B00F18F4A /* LinkTests.swift */,
 				1423D85821A9DD5B0013A457 /* Fixtures */,
 				1423D85D21A9DD620013A457 /* Supporting Files */,
 			);
 			path = Tests;
+			sourceTree = "<group>";
+		};
+		14491B4321AFB2C00051469B /* Headings */ = {
+			isa = PBXGroup;
+			children = (
+				14491B4421AFB2D40051469B /* MarkdownHeading.swift */,
+				14491B3B21AFA6FA0051469B /* MarkdownHashHeading.swift */,
+				14491B4721AFB3310051469B /* MarkdownUnderlineHeading.swift */,
+			);
+			path = Headings;
 			sourceTree = "<group>";
 		};
 		1482F87821A5D36800CF0C6C = {
@@ -176,10 +204,12 @@
 		148FF78121A71571004E11FE /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				14491B4321AFB2C00051469B /* Headings */,
 				148FF78221A71588004E11FE /* MarkdownCallout.swift */,
 				148FF78421A715F4004E11FE /* MarkdownImage.swift */,
 				14AADEA321AF408400F18F4A /* MarkdownLink.swift */,
 				1426455121A8B2E100678186 /* MPDocumentWrapper.swift */,
+				14491B4021AFB27E0051469B /* MarkdownIndent.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -328,14 +358,20 @@
 			files = (
 				1423D85421A9DB340013A457 /* ThesiControllerTests.swift in Sources */,
 				1423D85621A9DCEF0013A457 /* MPDocumentWrapper.swift in Sources */,
+				14491B4221AFB27E0051469B /* MarkdownIndent.swift in Sources */,
+				14491B4621AFB2D40051469B /* MarkdownHeading.swift in Sources */,
 				1426456521A8C41A00678186 /* RegexReplaceable.swift in Sources */,
 				1426456D21A927C600678186 /* ImageTests.swift in Sources */,
 				1423D85521A9DCE30013A457 /* ThesiController.swift in Sources */,
 				1426456621A8C41A00678186 /* CaseIterable.swift in Sources */,
 				1426456F21A92D4F00678186 /* ThesiTestCase.swift in Sources */,
+				14491B4B21AFB6590051469B /* UnderlineHeadingTests.swift in Sources */,
 				14AADEA721AF420B00F18F4A /* LinkTests.swift in Sources */,
+				14491B3F21AFAC890051469B /* HashHeadingTests.swift in Sources */,
 				1426456321A8C40100678186 /* MarkdownCallout.swift in Sources */,
 				1426456421A8C40100678186 /* MarkdownImage.swift in Sources */,
+				14491B3D21AFA6FA0051469B /* MarkdownHashHeading.swift in Sources */,
+				14491B4921AFB3310051469B /* MarkdownUnderlineHeading.swift in Sources */,
 				1426455B21A8C1AB00678186 /* CalloutTests.swift in Sources */,
 				14AADEA521AF408400F18F4A /* MarkdownLink.swift in Sources */,
 			);
@@ -348,10 +384,14 @@
 				1482F89121A5E49C00CF0C6C /* ThesiController.swift in Sources */,
 				148FF78821A71633004E11FE /* CaseIterable.swift in Sources */,
 				148FF78521A715F4004E11FE /* MarkdownImage.swift in Sources */,
+				14491B3C21AFA6FA0051469B /* MarkdownHashHeading.swift in Sources */,
 				148FF78B21A7167A004E11FE /* RegexReplaceable.swift in Sources */,
 				14AADEA421AF408400F18F4A /* MarkdownLink.swift in Sources */,
 				148FF78321A71588004E11FE /* MarkdownCallout.swift in Sources */,
 				1426455221A8B2E100678186 /* MPDocumentWrapper.swift in Sources */,
+				14491B4121AFB27E0051469B /* MarkdownIndent.swift in Sources */,
+				14491B4521AFB2D40051469B /* MarkdownHeading.swift in Sources */,
+				14491B4821AFB3310051469B /* MarkdownUnderlineHeading.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

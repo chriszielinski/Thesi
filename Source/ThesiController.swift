@@ -14,7 +14,9 @@ public class ThesiController: NSObject {
     static let regexReplaceableClasses: [RegexReplaceable.Type] = [
         MarkdownImage.self,
         MarkdownCallout.self,
-        MarkdownLink.self
+        MarkdownLink.self,
+        MarkdownHashHeading.self,
+        MarkdownUnderlineHeading.self
     ]
 
     @objc

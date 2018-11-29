@@ -10,10 +10,6 @@ import Foundation
 import Regex
 
 struct MarkdownLink {
-    //swiftlint:disable:next force_try
-    static let regex = try! Regex(pattern: "( *)\\$\\[([^\\]]*)\\] *\\( *\"?([^\\)\"]*)\"? *\\)",
-                                  options: [.dotMatchesLineSeparators],
-                                  groupNames: RegexGroupKey.allRawValues)
 
     enum RegexGroupKey: String, CaseIterable {
         case indent
@@ -25,6 +21,19 @@ struct MarkdownLink {
     let text: String
     let url: String
 
+}
+
+extension MarkdownLink: RegexReplaceable {
+
+    //swiftlint:disable:next force_try
+    static let regex = try! Regex(pattern: "( *)\\$\\[([^\\]]*)\\] *\\( *\"?([^\\)\"]*)\"? *\\)",
+                                  options: [.dotMatchesLineSeparators],
+                                  groupNames: RegexGroupKey.allRawValues)
+
+    var replacementMarkdownString: String {
+        return "\(indent)<a href=\"\(url)\" target=\"_blank\">\(text)</a>"
+    }
+
     init?(match: Match) {
         indent = match.group(named: RegexGroupKey.indent.rawValue) ?? ""
 
@@ -35,10 +44,5 @@ struct MarkdownLink {
         text = match.group(named: RegexGroupKey.text.rawValue) ?? ""
         url = match.group(named: RegexGroupKey.url.rawValue) ?? ""
     }
-}
 
-extension MarkdownLink: RegexReplaceable {
-    var replacementMarkdownString: String {
-        return "\(indent)<a href=\"\(url)\" target=\"_blank\">\(text)</a>"
-    }
 }

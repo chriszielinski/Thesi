@@ -10,17 +10,6 @@ import Foundation
 import Regex
 
 struct MarkdownImage {
-    //swiftlint:disable force_try
-    static let regex = try! Regex(pattern: "^( *)!(!)?\\[(.+?)\\] *\\( *\"?(.+?)\"? *(,.+)?\\)",
-                                  options: [.anchorsMatchLines],
-                                  groupNames: RegexGroupKey.allRawValues)
-    static let widthRegex = try! Regex(pattern: "width *= *\"?([^,\"]+)\"?",
-                                       options: [.caseInsensitive],
-                                       groupNames: [])
-    static let heightRegex = try! Regex(pattern: "height *= *\"?([^,\"]+)\"?",
-                                        options: [.caseInsensitive],
-                                        groupNames: [])
-    //swiftlint:enable force_try
 
     enum RegexGroupKey: String, CaseIterable {
         case indent
@@ -37,29 +26,22 @@ struct MarkdownImage {
     var width: String?
     var height: String?
 
-    init?(match: Match) {
-        indent = match.group(named: RegexGroupKey.indent.rawValue) ?? ""
-
-        // Make sure it isn't inside a code block.
-        guard indent.count < 4
-            else { return nil }
-
-        isCentered = match.group(named: RegexGroupKey.centerAlign.rawValue) != nil
-        alternateText = match.group(named: RegexGroupKey.alternateText.rawValue) ?? ""
-        url = match.group(named: RegexGroupKey.url.rawValue) ?? ""
-
-        if let properties = match.group(named: RegexGroupKey.properties.rawValue) {
-            width = MarkdownImage.widthRegex.findFirst(in: properties)?.group(at: 1)
-            height = MarkdownImage.heightRegex.findFirst(in: properties)?.group(at: 1)
-        }
-
-        // Make sure it's not a CommonMark Markdown image.
-        guard isCentered || width != nil || height != nil
-            else { return nil }
-    }
 }
 
 extension MarkdownImage: RegexReplaceable {
+
+    //swiftlint:disable force_try
+    static let regex = try! Regex(pattern: "^( *)!(!)?\\[(.+?)\\] *\\( *\"?(.+?)\"? *(,.+)?\\)",
+                                  options: [.anchorsMatchLines],
+                                  groupNames: RegexGroupKey.allRawValues)
+    static let widthRegex = try! Regex(pattern: "width *= *\"?([^,\"]+)\"?",
+                                       options: [.caseInsensitive],
+                                       groupNames: [])
+    static let heightRegex = try! Regex(pattern: "height *= *\"?([^,\"]+)\"?",
+                                        options: [.caseInsensitive],
+                                        groupNames: [])
+    //swiftlint:enable force_try
+
     var replacementMarkdownString: String {
         var imageHTML = "<img src=\"\(url)\" alt=\"\(alternateText)\""
 
@@ -83,4 +65,26 @@ extension MarkdownImage: RegexReplaceable {
             return indent + imageHTML
         }
     }
+
+    init?(match: Match) {
+        indent = match.group(named: RegexGroupKey.indent.rawValue) ?? ""
+
+        // Make sure it isn't inside a code block.
+        guard indent.count < 4
+            else { return nil }
+
+        isCentered = match.group(named: RegexGroupKey.centerAlign.rawValue) != nil
+        alternateText = match.group(named: RegexGroupKey.alternateText.rawValue) ?? ""
+        url = match.group(named: RegexGroupKey.url.rawValue) ?? ""
+
+        if let properties = match.group(named: RegexGroupKey.properties.rawValue) {
+            width = MarkdownImage.widthRegex.findFirst(in: properties)?.group(at: 1)
+            height = MarkdownImage.heightRegex.findFirst(in: properties)?.group(at: 1)
+        }
+
+        // Make sure it's not a CommonMark Markdown image.
+        guard isCentered || width != nil || height != nil
+            else { return nil }
+    }
+
 }

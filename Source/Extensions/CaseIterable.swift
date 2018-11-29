@@ -9,7 +9,9 @@
 import Foundation
 
 extension CaseIterable where Self: RawRepresentable {
+
     static var allRawValues: [Self.RawValue] {
         return allCases.map({ $0.rawValue })
     }
+
 }

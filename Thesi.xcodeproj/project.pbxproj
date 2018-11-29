@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		1423D85421A9DB340013A457 /* IntegrationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1423D85321A9DB340013A457 /* IntegrationTests.swift */; };
+		1423D85421A9DB340013A457 /* ThesiControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1423D85321A9DB340013A457 /* ThesiControllerTests.swift */; };
 		1423D85521A9DCE30013A457 /* ThesiController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1482F88B21A5D3B100CF0C6C /* ThesiController.swift */; };
 		1423D85621A9DCEF0013A457 /* MPDocumentWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1426455121A8B2E100678186 /* MPDocumentWrapper.swift */; };
 		1423D85B21A9DD5B0013A457 /* integration-test.md in Resources */ = {isa = PBXBuildFile; fileRef = 1423D85921A9DD5B0013A457 /* integration-test.md */; };
@@ -60,7 +60,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		1423D85321A9DB340013A457 /* IntegrationTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntegrationTests.swift; sourceTree = "<group>"; };
+		1423D85321A9DB340013A457 /* ThesiControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThesiControllerTests.swift; sourceTree = "<group>"; };
 		1423D85921A9DD5B0013A457 /* integration-test.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = "integration-test.md"; sourceTree = "<group>"; };
 		1423D85A21A9DD5B0013A457 /* integration-test-expected.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = "integration-test-expected.md"; sourceTree = "<group>"; };
 		1426455121A8B2E100678186 /* MPDocumentWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MPDocumentWrapper.swift; sourceTree = "<group>"; };
@@ -125,7 +125,7 @@
 			children = (
 				1426455A21A8C1AB00678186 /* CalloutTests.swift */,
 				1426456C21A927C600678186 /* ImageTests.swift */,
-				1423D85321A9DB340013A457 /* IntegrationTests.swift */,
+				1423D85321A9DB340013A457 /* ThesiControllerTests.swift */,
 				14AADEA621AF420B00F18F4A /* LinkTests.swift */,
 				1423D85821A9DD5B0013A457 /* Fixtures */,
 				1423D85D21A9DD620013A457 /* Supporting Files */,
@@ -326,7 +326,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1423D85421A9DB340013A457 /* IntegrationTests.swift in Sources */,
+				1423D85421A9DB340013A457 /* ThesiControllerTests.swift in Sources */,
 				1423D85621A9DCEF0013A457 /* MPDocumentWrapper.swift in Sources */,
 				1426456521A8C41A00678186 /* RegexReplaceable.swift in Sources */,
 				1426456D21A927C600678186 /* ImageTests.swift in Sources */,

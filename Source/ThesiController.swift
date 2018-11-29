@@ -41,4 +41,5 @@ public class ThesiController: NSObject {
             regexReplaceable.replaceAll(in: &markdownString)
         }
     }
+
 }

@@ -18,11 +18,6 @@ enum MarkdownCallout: String, CaseIterable {
     case bug
     case why
 
-    //swiftlint:disable:next force_try
-    static let regex: Regex = try! Regex(pattern: "^( *)< *(\\w+) *> *",
-                                         options: [.anchorsMatchLines, .useUnicodeWordBoundaries],
-                                         groupNames: [])
-
     var usesTitle: Bool {
         switch self {
         case .fire:
@@ -55,6 +50,20 @@ enum MarkdownCallout: String, CaseIterable {
         }
     }
 
+}
+
+extension MarkdownCallout: RegexReplaceable {
+
+    //swiftlint:disable:next force_try
+    static let regex: Regex = try! Regex(pattern: "^( *)< *(\\w+) *> *",
+                                         options: [.anchorsMatchLines, .useUnicodeWordBoundaries],
+                                         groupNames: [])
+
+    var replacementMarkdownString: String {
+        let titleMarkdown = usesTitle ? " **" + name + ":**" : ""
+        return "> \(emoji)\(titleMarkdown) "
+    }
+
     init?(match: Match) {
         let indentCount = match.group(at: 1)?.count ?? 0
         // Make sure it isn't inside a code block.
@@ -64,11 +73,5 @@ enum MarkdownCallout: String, CaseIterable {
 
         self.init(rawValue: calloutCaptureGroup.lowercased())
     }
-}
 
-extension MarkdownCallout: RegexReplaceable {
-    var replacementMarkdownString: String {
-        let titleMarkdown = usesTitle ? " **" + name + ":**" : ""
-        return "> \(emoji)\(titleMarkdown) "
-    }
 }

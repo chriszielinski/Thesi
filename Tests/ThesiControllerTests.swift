@@ -1,5 +1,5 @@
 //
-//  IntegrationTests.swift
+//  ThesiControllerTests.swift
 //  Thesi 🧝‍♀️ Tests
 //
 //  Created by Chris Zielinski on 11/24/18.
@@ -8,7 +8,7 @@
 
 import XCTest
 
-class IntegrationTests: XCTestCase {
+class ThesiControllerTests: XCTestCase {
 
     class MockMPDocument: NSDocument {
         @objc
@@ -17,7 +17,7 @@ class IntegrationTests: XCTestCase {
         dynamic var editor: NSTextView?
 
         init(markdownFilename: String) {
-            let url = Bundle.init(for: IntegrationTests.self).url(forResource: markdownFilename, withExtension: "md")!
+            let url = Bundle.init(for: ThesiControllerTests.self).url(forResource: markdownFilename, withExtension: "md")!
             // swiftlint:disable:next force_try
             markdown = try! String(contentsOf: url)
         }
@@ -46,7 +46,7 @@ class IntegrationTests: XCTestCase {
         let mockDocument = MockMPDocument(markdownFilename: "integration-test")
         _ = MockDocumentController(currentDocument: mockDocument)
 
-        let expectedMarkdownURL = Bundle.init(for: IntegrationTests.self)
+        let expectedMarkdownURL = Bundle.init(for: ThesiControllerTests.self)
             .url(forResource: "integration-test-expected", withExtension: "md")!
         //swiftlint:disable:next force_try
         let expectedMarkdown = try! String(contentsOf: expectedMarkdownURL)

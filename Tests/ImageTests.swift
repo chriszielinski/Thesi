@@ -130,4 +130,5 @@ class ImageTests: ThesiTestCase {
                             </p>
                             """)
     }
+
 }

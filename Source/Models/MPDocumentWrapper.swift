@@ -87,4 +87,5 @@ class MPDocumentWrapper {
     func clearEditorHighlighting() {
         highlighter?.perform(Highlighter.clearHighlighting.selector)
     }
+
 }

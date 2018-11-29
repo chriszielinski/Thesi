@@ -53,4 +53,5 @@ class LinkTests: ThesiTestCase {
                   test: "![Alternate text](http://google.com/images)",
                   expected: "![Alternate text](http://google.com/images)")
     }
+
 }

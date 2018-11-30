@@ -21,7 +21,10 @@ It has roots in a piece of classical Latin literature from 45 BC, making it over
 
  <Fire > This is a fire callout.
  
- Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source.
+Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source.
+ 
+ - **List item 1** — Description for list item 1.
+ - **List item 2** — Description for list item 2.
 
 < Bug> This is a bug callout.
 

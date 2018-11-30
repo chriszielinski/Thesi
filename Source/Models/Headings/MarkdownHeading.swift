@@ -58,6 +58,10 @@ struct MarkdownHeading {
     }
 
     init?(indent: String?, headingText: String, underline: String) {
+        // Make sure the heading text isn't just whitespace/empty.
+        guard !headingText.trimmingCharacters(in: .whitespaces).isEmpty
+            else { return nil }
+
         self.indent = MarkdownIndent(matchSubstring: indent)
 
         guard !self.indent.isCodeBlock, let heading = Heading(underline: underline)

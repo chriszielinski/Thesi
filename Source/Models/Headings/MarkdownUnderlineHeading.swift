@@ -24,7 +24,7 @@ struct MarkdownUnderlineHeading {
 extension MarkdownUnderlineHeading: RegexReplaceable {
 
     //swiftlint:disable:next force_try
-    static let regex = try! Regex(pattern: "^([ \t]*)([^#\n]+)\n[ \t]*([=-]+)",
+    static let regex = try! Regex(pattern: "^([ \t]*)([^#\n]+)\n[ \t]*([=-]+)$",
                                   options: [.anchorsMatchLines],
                                   groupNames: RegexGroupKey.allRawValues)
 

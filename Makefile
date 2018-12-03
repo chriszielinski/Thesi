@@ -13,10 +13,10 @@ carthage:
 	carthage update --platform macOS
 
 build:
-	xcodebuild $(XCODEFLAGS) -configuration Release | xcpretty
+	xcodebuild $(XCODEFLAGS) -configuration Release | xcpretty && exit ${PIPESTATUS[0]}
 
 test: clean-test
-	xcodebuild test $(XCODEFLAGS) -configuration Debug -resultBundlePath testResults | xcpretty
+	xcodebuild test $(XCODEFLAGS) -configuration Debug -resultBundlePath testResults | xcpretty && exit ${PIPESTATUS[0]}
 
 travis-test: test
 	./xccov-to-sonarqube-generic.sh testResults/1_Test/action.xccovarchive/ > testResults/sonarqube-generic-coverage.xml
